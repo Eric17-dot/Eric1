@@ -22,7 +22,7 @@
 - **換成自己的照片**：把照片（例如 `me.jpg`）放進 `images` 資料夾，再打開 `index.html`，把 `images/about-placeholder.svg` 改成 `images/me.jpg`。直式（4:5）照片的效果最好。
 - **修改 Email**：在 `index.html` 裡搜尋 `jzha0847@student.monash.edu`，把每一處都換成新地址。
 - **修改名字**：在 `index.html` 裡搜尋 `Eric`，換成你想顯示的名字。
-- **新增旅行地點**：在 `index.html` 的 Travel 區塊，複製一整段 `<li class="place …">…</li>`，再改掉地名和那句描述即可。
+- **新增旅行地點**：在 `index.html` 的 Global Footprints 區塊，複製一整段 `<li class="place reveal">…</li>`，再改掉地名和那句描述即可；去過的地方放在「Been there」，想去的放在「Up next」。
 - **調整顏色或字體**：打開 `style.css`，最上面的「設計變數」區塊集中了所有顏色、字體、留白和動畫曲線設定。
 
 ## 發佈成公開網址（GitHub Pages）
