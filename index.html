@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Eric — Hello.</title>
-  <meta name="description" content="熱愛探索世界的傳媒與人文學科學子。">
+  <meta name="description" content="Exploring the world through humanities, media, and technology.">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Eric — Hello.">
-  <meta property="og:description" content="熱愛探索世界的傳媒與人文學科學子。">
+  <meta property="og:description" content="Exploring the world through humanities, media, and technology.">
   <meta property="og:type" content="website">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -16,234 +16,177 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳至主要內容</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ========== 導航欄（毛玻璃效果） ========== -->
-  <header class="nav" id="nav">
-    <nav class="nav-inner" aria-label="主選單">
-      <a class="nav-logo" href="#top" lang="en">Eric</a>
+  <header class="nav">
+    <nav class="nav-inner" aria-label="Main">
+      <a class="nav-logo" href="#top">Eric</a>
       <ul class="nav-links">
-        <li><a href="#about">關於我</a></li>
-        <li><a href="#travel">旅行</a></li>
-        <li><a href="#interests">生活</a></li>
-        <li><a href="#contact">聯繫我</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <!-- ========== 第一部分：首屏 Hero ========== -->
+    <!-- ========== 首屏 Hero ========== -->
     <section class="hero" id="top">
       <div class="hero-inner">
-        <h1 class="hero-title" lang="en">
+        <h1 class="hero-title">
           <span class="visually-hidden">Hello.</span>
           <span class="hero-word" aria-hidden="true"><span style="--i: 0">H</span><span style="--i: 1">e</span><span style="--i: 2">l</span><span style="--i: 3">l</span><span style="--i: 4">o</span><span style="--i: 5">.</span></span>
         </h1>
-        <p class="hero-subtitle"><span class="phrase">熱愛探索世界的</span><span class="phrase">傳媒與人文學科學子。</span></p>
+        <p class="hero-subtitle">Exploring the world through humanities, media, and technology.</p>
       </div>
-      <a class="scroll-cue" href="#about" aria-label="向下瀏覽：關於我">
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
       </a>
     </section>
 
-    <!-- ========== 第二部分：關於我 About Me ========== -->
-    <section class="about" id="about">
+    <!-- ========== 關於我 About Me ========== -->
+    <section class="section about" id="about">
       <div class="container about-grid">
         <figure class="about-media reveal">
           <!-- 想換成自己的照片？把照片放進 images 資料夾，再把下面的檔名改掉即可 -->
-          <img src="images/about-placeholder.svg" alt="灰階風景佔位圖：層層山巒與遠方的太陽" width="800" height="1000" loading="lazy" decoding="async">
+          <img src="images/about-placeholder.svg" alt="Grayscale landscape: layered mountains beneath a distant sun" width="800" height="1000" loading="lazy" decoding="async">
         </figure>
 
         <div class="about-text">
-          <p class="eyebrow reveal" lang="en">About Me</p>
-          <h2 class="section-title reveal" style="--delay: 0.08s">下一站，<br>澳洲。</h2>
-          <p class="body-copy reveal" style="--delay: 0.16s">
-            目前，我正在就讀 <strong>Monash University 的 Foundation Year</strong>（大學預科），為接下來的大學生活打好基礎。
-          </p>
-          <p class="body-copy reveal" style="--delay: 0.24s">
-            預科結束後，我將前往<strong>澳洲</strong>展開大學生活，繼續探索<strong>傳媒與人文</strong>的世界，在更廣闊的天地裡拓展視野。
-          </p>
-          <p class="body-copy reveal" style="--delay: 0.32s">
-            課堂之外，我是一個不折不扣的旅人——只要有機會，就會背上背包出發。
-          </p>
-          <dl class="stats reveal" style="--delay: 0.4s">
-            <div class="stat">
-              <dt>走過的國家</dt>
-              <dd lang="en">4+</dd>
+          <p class="eyebrow reveal">About Me</p>
+          <h2 class="headline reveal" style="--delay: 0.1s">Next stop,<br>Australia.</h2>
+          <p class="lead reveal" style="--delay: 0.2s">A student of media and the humanities, getting ready for the next chapter.</p>
+
+          <dl class="facts">
+            <div class="fact reveal" style="--delay: 0.3s">
+              <dt>Now</dt>
+              <dd>Monash University Foundation Year.</dd>
             </div>
-            <div class="stat">
-              <dt>橫跨的大洲</dt>
-              <dd lang="en">3+</dd>
+            <div class="fact reveal" style="--delay: 0.4s">
+              <dt>Next</dt>
+              <dd>University in Australia.</dd>
+            </div>
+            <div class="fact reveal" style="--delay: 0.5s">
+              <dt>Always</dt>
+              <dd>Exploring the world, one backpack at a time.</dd>
             </div>
           </dl>
         </div>
       </div>
     </section>
 
-    <!-- ========== 第三部分：旅行足跡 Travel ========== -->
-    <!-- 想新增地方？複製一整段 <li class="place-item ...">…</li>，再改掉地名與文字即可 -->
-    <section class="travel" id="travel">
+    <!-- ========== 旅行足跡 Travel ========== -->
+    <!-- 想新增地方？複製一整段 <li class="place">…</li>，再改掉地名與文字即可 -->
+    <section class="section travel" id="travel">
       <div class="container">
-        <header class="section-header">
-          <p class="eyebrow reveal" lang="en">Travel</p>
-          <h2 class="section-title reveal" style="--delay: 0.08s">在路上。</h2>
-          <p class="section-intro reveal" style="--delay: 0.16s"><span class="phrase">從尼羅河畔到太平洋岸邊，</span><span class="phrase"><span class="phrase">每一段旅程，</span><span class="phrase">都讓世界變得更具體一點。</span></span></p>
+        <header class="section-header section-header--left">
+          <p class="eyebrow reveal">Travel</p>
+          <h2 class="headline reveal" style="--delay: 0.1s">Places I’ve been.</h2>
         </header>
 
-        <ul class="place-grid">
-          <!-- 美國（寬版深色卡片） -->
-          <li class="place-item place-item--wide reveal">
-            <article class="card card--dark place">
-              <p class="place-eyebrow">美國 · 北美洲</p>
-              <h3 class="place-title" lang="en">United States.</h3>
-              <p class="place-text">美國是我走過最多地方的國家。從加州的陽光海岸、舊金山起伏的街道，到華盛頓特區的紀念碑、紐約永不停歇的節奏——每座城市，都有截然不同的性格。</p>
-              <ul class="chips" aria-label="走過的美國城市與州">
-                <li class="chip" lang="en">California</li>
-                <li class="chip" lang="en">San Francisco</li>
-                <li class="chip" lang="en">Washington D.C.</li>
-                <li class="chip" lang="en">New York</li>
-                <li class="chip" lang="en">New Jersey</li>
-              </ul>
-            </article>
+        <ul class="places">
+          <li class="place reveal">
+            <div>
+              <h3 class="place-name">United States</h3>
+              <p class="place-meta">California · San Francisco · Washington, D.C. · New York · New Jersey</p>
+            </div>
+            <p class="place-note">Coast to coast, every city keeps its own rhythm.</p>
           </li>
-
-          <!-- 埃及 -->
-          <li class="place-item reveal" style="--delay: 0.12s">
-            <article class="card place">
-              <p class="place-eyebrow">埃及 · 非洲</p>
-              <h3 class="place-title" lang="en">Egypt.</h3>
-              <p class="place-text">走進數千年的古文明，時間忽然有了重量。</p>
-            </article>
+          <li class="place reveal">
+            <h3 class="place-name">Egypt</h3>
+            <p class="place-note">History you can stand in front of.</p>
           </li>
-
-          <!-- 日本 -->
-          <li class="place-item reveal">
-            <article class="card place">
-              <p class="place-eyebrow">日本 · 亞洲</p>
-              <h3 class="place-title" lang="en">Japan.</h3>
-              <p class="place-text">在每一個細節裡，看見秩序與溫柔。</p>
-            </article>
+          <li class="place reveal">
+            <h3 class="place-name">Japan</h3>
+            <p class="place-note">Precision, with a quiet kind of warmth.</p>
           </li>
-
-          <!-- 新加坡 -->
-          <li class="place-item reveal" style="--delay: 0.12s">
-            <article class="card place">
-              <p class="place-eyebrow">新加坡 · 亞洲</p>
-              <h3 class="place-title" lang="en">Singapore.</h3>
-              <p class="place-text">在一座花園城市裡，看見多元文化的和諧共處。</p>
-            </article>
-          </li>
-
-          <!-- 更多地方 -->
-          <li class="place-item reveal" style="--delay: 0.24s">
-            <article class="card place place--more">
-              <p class="place-eyebrow">未完待續</p>
-              <h3 class="place-title" lang="en">And more.</h3>
-              <p class="place-text">還有更多走過的地方，以及地圖上下一個等我出發的點。</p>
-            </article>
+          <li class="place reveal">
+            <h3 class="place-name">Singapore</h3>
+            <p class="place-note">A garden city where cultures meet.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ========== 第四部分：生活與熱愛 Interests ========== -->
-    <section class="interests" id="interests">
+    <!-- ========== 愛好與旅行 Interests & Travel ========== -->
+    <section class="section interests" id="interests">
       <div class="container">
         <header class="section-header">
-          <p class="eyebrow reveal" lang="en">Interests</p>
-          <h2 class="section-title reveal" style="--delay: 0.08s">生活與熱愛。</h2>
-          <p class="section-intro reveal" style="--delay: 0.16s"><span class="phrase">旅途、熱愛與好奇心，</span><span class="phrase">構成了我看世界的方式。</span></p>
+          <p class="eyebrow reveal">Interests &amp; Travel</p>
+          <h2 class="headline reveal" style="--delay: 0.1s">Travel light.<br>Stay curious.</h2>
         </header>
 
-        <ul class="card-grid">
-          <!-- 卡片 1：背包客旅行 -->
-          <li class="card-item reveal">
-            <article class="card card--muted">
-              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M9.5 5.5v-1a2.5 2.5 0 0 1 5 0v1"/>
-                <path d="M5.5 10.5a5 5 0 0 1 5-5h3a5 5 0 0 1 5 5V19a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2z"/>
-                <path d="M8.5 21v-4.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5V21"/>
-                <path d="M9.5 11h5"/>
-              </svg>
-              <p class="card-eyebrow">背包客旅行</p>
-              <h3 class="card-title">輕裝上陣，<br>走得更遠。</h3>
-              <p class="card-text">我喜歡不帶托運行李，只背著一個背包出發。行李少一點，腳步就自由一點——最近一次，是在吉隆坡市中心漫步，用雙腳慢慢探索這座城市。</p>
-              <ul class="chips" aria-label="旅行筆記">
-                <li class="chip">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
-                  吉隆坡市中心
-                </li>
-                <li class="chip">0 件托運行李</li>
-              </ul>
-            </article>
+        <ul class="interest-grid">
+          <!-- 極簡背包客 -->
+          <li class="interest reveal">
+            <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9.5 5.5v-1a2.5 2.5 0 0 1 5 0v1"/>
+              <path d="M5.5 10.5a5 5 0 0 1 5-5h3a5 5 0 0 1 5 5V19a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2z"/>
+              <path d="M8.5 21v-4.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5V21"/>
+              <path d="M9.5 11h5"/>
+            </svg>
+            <p class="interest-eyebrow">Minimalist Backpacking</p>
+            <h3 class="interest-title">One bag.<br>Zero check-ins.</h3>
+            <p class="interest-text">No checked luggage — just a backpack. Less to carry, more freedom to wander. Most recently, on foot through the heart of Kuala Lumpur.</p>
           </li>
 
-          <!-- 卡片 2：獨特愛好（深色卡片） -->
-          <li class="card-item reveal" style="--delay: 0.12s">
-            <article class="card card--dark">
-              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.5 16.5H3a1 1 0 0 1-1-1v-1.7a1.5 1.5 0 0 1 1-1.4l3.3-1.1C8 9.9 9.8 9 12 9h1c1.9 0 3.4.8 4.7 2.2l2.6.6a2.2 2.2 0 0 1 1.7 2.1v1.6a1 1 0 0 1-1 1h-1.5"/>
-                <path d="M8.5 16.5h7"/>
-                <circle cx="6.5" cy="16.5" r="2"/>
-                <circle cx="17.5" cy="16.5" r="2"/>
-              </svg>
-              <p class="card-eyebrow">獨特愛好</p>
-              <h3 class="card-title">在方寸之間，<br>收藏速度。</h3>
-              <p class="card-text">我關注汽車文化，也熱衷於收集模型車。逛馬來西亞模型車展時，一台台精緻的微縮車款，讓我看見設計與工藝背後的用心與故事。</p>
-              <ul class="chips" aria-label="愛好筆記">
-                <li class="chip">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
-                  馬來西亞模型車展
-                </li>
-                <li class="chip">模型收藏</li>
-              </ul>
-            </article>
+          <!-- 汽車文化與模型車 -->
+          <li class="interest reveal" style="--delay: 0.15s">
+            <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 16.5H3a1 1 0 0 1-1-1v-1.7a1.5 1.5 0 0 1 1-1.4l3.3-1.1C8 9.9 9.8 9 12 9h1c1.9 0 3.4.8 4.7 2.2l2.6.6a2.2 2.2 0 0 1 1.7 2.1v1.6a1 1 0 0 1-1 1h-1.5"/>
+              <path d="M8.5 16.5h7"/>
+              <circle cx="6.5" cy="16.5" r="2"/>
+              <circle cx="17.5" cy="16.5" r="2"/>
+            </svg>
+            <p class="interest-eyebrow">Car Culture</p>
+            <h3 class="interest-title">Speed,<br>in miniature.</h3>
+            <p class="interest-text">A fascination with car culture and scale models. At Malaysia’s model car shows, every tiny detail tells a story of design and craft.</p>
           </li>
 
-          <!-- 卡片 3：語言與文化 -->
-          <li class="card-item reveal" style="--delay: 0.24s">
-            <article class="card card--muted">
-              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M3 12h18"/>
-                <path d="M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3z"/>
-              </svg>
-              <p class="card-eyebrow">語言與文化</p>
-              <h3 class="card-title">每一種語言，<br>都是一扇窗。</h3>
-              <p class="card-text">我對多元文化有著濃厚的興趣，也喜歡探索不同的語系——包括由右至左書寫、與中文截然不同的阿拉伯語。每學會一句問候，世界就更近了一點。</p>
-              <ul class="chips" aria-label="不同語言的「你好」">
-                <li class="chip" lang="en">Hello</li>
-                <li class="chip" lang="ar" dir="rtl">مرحبا</li>
-                <li class="chip" lang="ja">こんにちは</li>
-              </ul>
-            </article>
+          <!-- 語言與多元文化 -->
+          <li class="interest reveal" style="--delay: 0.3s">
+            <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18"/>
+              <path d="M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3z"/>
+            </svg>
+            <p class="interest-eyebrow">Languages &amp; Cultures</p>
+            <h3 class="interest-title">Every language<br>is a window.</h3>
+            <p class="interest-text">Drawn to cultures unlike my own — including Arabic, written from right to left. Every new greeting brings the world a little closer.</p>
+            <p class="greetings" aria-label="Hello in English, Arabic and Japanese">
+              <span>Hello</span>
+              <span lang="ar" dir="rtl">مرحبا</span>
+              <span lang="ja">こんにちは</span>
+            </p>
           </li>
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- ========== 第五部分：聯繫方式 Footer ========== -->
+  <!-- ========== 聯繫方式 Footer ========== -->
   <footer class="footer" id="contact">
     <div class="container footer-main">
-      <h2 class="footer-title reveal" lang="en">Let’s connect.</h2>
-      <p class="footer-text reveal" style="--delay: 0.08s"><span class="phrase">想聊聊旅行、模型車，或是語言與留學？</span><span class="phrase">歡迎寫信給我。</span></p>
-      <div class="reveal" style="--delay: 0.16s">
+      <h2 class="footer-title reveal">Let’s connect.</h2>
+      <p class="footer-text reveal" style="--delay: 0.1s">Travel stories, model cars, or life abroad — I’d love to hear from you.</p>
+      <div class="footer-email reveal" style="--delay: 0.2s">
         <!-- 想換 Email？把下面每一個 jzha0847@student.monash.edu 都改成新地址即可 -->
-        <a class="email-button" href="mailto:jzha0847@student.monash.edu" aria-label="寄 Email 給我">
+        <a class="email-button" href="mailto:jzha0847@student.monash.edu" aria-label="Email me">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="5.5" width="18" height="13" rx="2.5"/>
             <path d="m4 7.5 8 6 8-6"/>
           </svg>
         </a>
-        <p class="email-label" lang="en"><a href="mailto:jzha0847@student.monash.edu">jzha0847@student.monash.edu</a></p>
+        <p class="email-address"><a href="mailto:jzha0847@student.monash.edu">jzha0847@student.monash.edu</a></p>
       </div>
     </div>
 
     <div class="container">
       <div class="footer-legal">
-        <p lang="en">Copyright © <span id="year">2026</span> Eric. All rights reserved.</p>
-        <a href="#top">回到頂部</a>
+        <p>Copyright © <span id="year">2026</span> Eric. All rights reserved.</p>
+        <a href="#top">Back to top</a>
       </div>
     </div>
   </footer>
