@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Eric — Hello.</title>
+  <meta name="description" content="熱愛探索世界的傳媒與人文學科學子。">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Eric — Hello.">
+  <meta property="og:description" content="熱愛探索世界的傳媒與人文學科學子。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <!-- 讓 CSS 知道 JavaScript 可用，才啟用滾動淡入動畫（沒有 JS 時內容照常顯示） -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <!-- ========== 導航欄（毛玻璃效果） ========== -->
+  <header class="nav" id="nav">
+    <nav class="nav-inner" aria-label="主選單">
+      <a class="nav-logo" href="#top" lang="en">Eric</a>
+      <ul class="nav-links">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#interests">生活與足跡</a></li>
+        <li><a href="#contact">聯繫我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ========== 第一部分：首屏 Hero ========== -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <h1 class="hero-title" lang="en">
+          <span class="visually-hidden">Hello.</span>
+          <span class="hero-word" aria-hidden="true"><span style="--i: 0">H</span><span style="--i: 1">e</span><span style="--i: 2">l</span><span style="--i: 3">l</span><span style="--i: 4">o</span><span style="--i: 5">.</span></span>
+        </h1>
+        <p class="hero-subtitle"><span class="phrase">熱愛探索世界的</span><span class="phrase">傳媒與人文學科學子。</span></p>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="向下瀏覽：關於我">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ========== 第二部分：關於我 About Me ========== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <figure class="about-media reveal">
+          <!-- 想換成自己的照片？把照片放進 images 資料夾，再把下面的檔名改掉即可 -->
+          <img src="images/about-placeholder.svg" alt="灰階風景佔位圖：層層山巒與遠方的太陽" width="800" height="1000" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="about-text">
+          <p class="eyebrow reveal" lang="en">About Me</p>
+          <h2 class="section-title reveal" style="--delay: 0.08s">下一站，<br>荷蘭。</h2>
+          <p class="body-copy reveal" style="--delay: 0.16s">
+            目前，我正全力準備<strong>雅思（IELTS）考試</strong>，目標是紮實地拿下 <strong>5.5 – 6 分</strong>。從聽、說、讀、寫開始，一步一腳印地打好語言基礎。
+          </p>
+          <p class="body-copy reveal" style="--delay: 0.24s">
+            與此同時，我正在籌備前往<strong>荷蘭</strong>，攻讀<strong>人文社科或傳媒領域的碩士學位</strong>。我期待走進不同的課堂與城市，在更廣闊的世界裡拓展視野。
+          </p>
+          <dl class="stats reveal" style="--delay: 0.32s">
+            <div class="stat">
+              <dt>雅思目標分數</dt>
+              <dd lang="en">5.5–6</dd>
+            </div>
+            <div class="stat">
+              <dt>碩士留學目的地</dt>
+              <dd>荷蘭</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 第三部分：生活與足跡 Interests & Travel ========== -->
+    <section class="interests" id="interests">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow reveal" lang="en">Interests &amp; Travel</p>
+          <h2 class="section-title reveal" style="--delay: 0.08s">生活與足跡。</h2>
+          <p class="section-intro reveal" style="--delay: 0.16s"><span class="phrase">旅途、熱愛與好奇心，</span><span class="phrase">構成了我看世界的方式。</span></p>
+        </header>
+
+        <ul class="card-grid">
+          <!-- 卡片 1：背包客旅行 -->
+          <li class="card-item reveal">
+            <article class="card">
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.5 5.5v-1a2.5 2.5 0 0 1 5 0v1"/>
+                <path d="M5.5 10.5a5 5 0 0 1 5-5h3a5 5 0 0 1 5 5V19a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2z"/>
+                <path d="M8.5 21v-4.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5V21"/>
+                <path d="M9.5 11h5"/>
+              </svg>
+              <p class="card-eyebrow">背包客旅行</p>
+              <h3 class="card-title">輕裝上陣，<br>走得更遠。</h3>
+              <p class="card-text">我喜歡不帶托運行李，只背著一個背包出發。行李少一點，腳步就自由一點——最近一次，是在吉隆坡市中心漫步，用雙腳慢慢探索這座城市。</p>
+              <ul class="chips" aria-label="旅行筆記">
+                <li class="chip">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                  吉隆坡市中心
+                </li>
+                <li class="chip">0 件托運行李</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 卡片 2：獨特愛好（深色卡片） -->
+          <li class="card-item reveal" style="--delay: 0.12s">
+            <article class="card card--dark">
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.5 16.5H3a1 1 0 0 1-1-1v-1.7a1.5 1.5 0 0 1 1-1.4l3.3-1.1C8 9.9 9.8 9 12 9h1c1.9 0 3.4.8 4.7 2.2l2.6.6a2.2 2.2 0 0 1 1.7 2.1v1.6a1 1 0 0 1-1 1h-1.5"/>
+                <path d="M8.5 16.5h7"/>
+                <circle cx="6.5" cy="16.5" r="2"/>
+                <circle cx="17.5" cy="16.5" r="2"/>
+              </svg>
+              <p class="card-eyebrow">獨特愛好</p>
+              <h3 class="card-title">在方寸之間，<br>收藏速度。</h3>
+              <p class="card-text">我關注汽車文化，也熱衷於收集模型車。逛馬來西亞模型車展時，一台台精緻的微縮車款，讓我看見設計與工藝背後的用心與故事。</p>
+              <ul class="chips" aria-label="愛好筆記">
+                <li class="chip">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                  馬來西亞模型車展
+                </li>
+                <li class="chip">模型收藏</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- 卡片 3：語言與文化 -->
+          <li class="card-item reveal" style="--delay: 0.24s">
+            <article class="card">
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3 12h18"/>
+                <path d="M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3z"/>
+              </svg>
+              <p class="card-eyebrow">語言與文化</p>
+              <h3 class="card-title">每一種語言，<br>都是一扇窗。</h3>
+              <p class="card-text">我對多元文化有著濃厚的興趣，也喜歡探索不同的語系——包括由右至左書寫、與中文截然不同的阿拉伯語。每學會一句問候，世界就更近了一點。</p>
+              <ul class="chips" aria-label="不同語言的「你好」">
+                <li class="chip" lang="en">Hello</li>
+                <li class="chip">你好</li>
+                <li class="chip" lang="ar" dir="rtl">مرحبا</li>
+                <li class="chip" lang="nl">Hallo</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 第四部分：聯繫方式 Footer ========== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-main">
+      <h2 class="footer-title reveal" lang="en">Let’s connect.</h2>
+      <p class="footer-text reveal" style="--delay: 0.08s"><span class="phrase">想聊聊旅行、模型車，或是語言與留學？</span><span class="phrase">歡迎寫信給我。</span></p>
+      <div class="reveal" style="--delay: 0.16s">
+        <!-- Email 預留位置：把 hello@example.com 換成你自己的 Email 即可 -->
+        <a class="email-button" href="mailto:hello@example.com" aria-label="寄 Email 給我">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5.5" width="18" height="13" rx="2.5"/>
+            <path d="m4 7.5 8 6 8-6"/>
+          </svg>
+        </a>
+        <p class="email-label" lang="en">Email</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-legal">
+        <p lang="en">Copyright © <span id="year">2026</span> Eric. All rights reserved.</p>
+        <a href="#top">回到頂部</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

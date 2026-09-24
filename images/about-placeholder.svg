@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <!-- 灰階風景佔位圖：之後可換成你自己的照片 -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9d9de"/>
+      <stop offset="0.45" stop-color="#e9e9ed"/>
+      <stop offset="0.62" stop-color="#f2f2f5"/>
+      <stop offset="1" stop-color="#e2e2e7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="0.42" cy="0.38" r="0.62">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f1f4"/>
+    </radialGradient>
+    <linearGradient id="ridge1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4d4d9"/>
+      <stop offset="1" stop-color="#e4e4e8"/>
+    </linearGradient>
+    <linearGradient id="ridge2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9b9bf"/>
+      <stop offset="1" stop-color="#d0d0d5"/>
+    </linearGradient>
+    <linearGradient id="ridge3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#96969c"/>
+      <stop offset="1" stop-color="#b3b3b8"/>
+    </linearGradient>
+    <linearGradient id="ridge4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#65656a"/>
+      <stop offset="1" stop-color="#86868b"/>
+    </linearGradient>
+    <linearGradient id="ridge5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c2c2e"/>
+      <stop offset="1" stop-color="#1d1d1f"/>
+    </linearGradient>
+    <filter id="mist" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- 天空與太陽 -->
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <circle cx="540" cy="360" r="280" fill="url(#glow)"/>
+  <circle cx="540" cy="360" r="92" fill="url(#sun)"/>
+
+  <!-- 遠山 -->
+  <path d="M0 600 C 80 574 140 558 210 568 C 280 578 330 546 400 538 C 470 530 520 560 590 564 C 660 568 720 546 800 552 V1000 H0 Z" fill="url(#ridge1)"/>
+  <ellipse cx="400" cy="610" rx="520" ry="34" fill="#ffffff" opacity="0.55" filter="url(#mist)"/>
+
+  <!-- 主峰 -->
+  <path d="M0 720 C 70 668 140 600 210 530 C 250 490 272 462 300 452 C 322 444 340 456 362 480 C 420 544 500 610 590 650 C 670 686 740 698 800 700 V1000 H0 Z" fill="url(#ridge2)"/>
+  <ellipse cx="360" cy="720" rx="560" ry="40" fill="#ffffff" opacity="0.45" filter="url(#mist)"/>
+
+  <!-- 右側山脊 -->
+  <path d="M0 800 C 120 760 250 726 370 716 C 460 708 530 640 600 590 C 632 568 656 560 680 568 C 720 582 760 616 800 632 V1000 H0 Z" fill="url(#ridge3)"/>
+  <ellipse cx="480" cy="800" rx="560" ry="36" fill="#ffffff" opacity="0.35" filter="url(#mist)"/>
+
+  <!-- 近景丘陵 -->
+  <path d="M0 860 C 130 818 250 822 370 840 C 490 858 590 812 690 790 C 735 780 772 780 800 784 V1000 H0 Z" fill="url(#ridge4)"/>
+
+  <!-- 前景與背包客剪影 -->
+  <path d="M0 940 C 120 910 240 900 360 912 C 470 922 560 918 640 900 C 700 886 752 874 800 868 V1000 H0 Z" fill="url(#ridge5)"/>
+  <g fill="#1d1d1f">
+    <circle cx="566" cy="853" r="6.2"/>
+    <path d="M556 866 C 556 861 559 859 566 859 C 573 859 576 861 576 866 L 575 888 C 575 891 573 892 570 892 L 562 892 C 559 892 557 891 557 888 Z"/>
+    <rect x="559.5" y="889" width="4.2" height="24" rx="2"/>
+    <rect x="568.3" y="889" width="4.2" height="24" rx="2"/>
+  </g>
+
+  <!-- 細緻顆粒感 -->
+  <rect width="800" height="1000" filter="url(#grain)" opacity="0.07"/>
+</svg>
