@@ -1,9 +1,8 @@
 /* ==========================================================================
-   Eric — 個人介紹網頁的少量互動效果
-   1. 向下捲動時，內容「淡入並微微上浮」
-   2. 捲動後，導航欄底部出現一條細線
-   3. 首屏「Hello.」隨捲動優雅地下沉、縮小並淡出
-   4. 頁腳年份自動更新
+   Eric — 個人網頁的少量互動效果
+   1. 向下捲動時，內容極度平滑地「淡入並微微上浮」
+   2. 首屏「Hello.」隨捲動緩緩下沉、縮小並淡出
+   3. 頁腳年份自動更新
    ========================================================================== */
 (function () {
   'use strict';
@@ -25,45 +24,39 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
     );
 
     revealItems.forEach((item) => observer.observe(item));
   }
 
-  /* ---------- 2 & 3. 導航欄細線 + 首屏淡出 ---------- */
-  const nav = document.getElementById('nav');
+  /* ---------- 2. 首屏淡出 ---------- */
   const hero = document.querySelector('.hero');
   let ticking = false;
 
   function update() {
-    const scrollY = window.scrollY;
-
-    nav.classList.toggle('is-scrolled', scrollY > 10);
-
-    if (hero && !reduceMotion) {
-      // 捲過首屏高度的 75% 時，動畫剛好完成
-      const progress = Math.min(scrollY / (window.innerHeight * 0.75), 1);
-      hero.style.setProperty('--hero-progress', progress.toFixed(4));
-    }
-
+    // 捲過首屏高度的 80% 時，動畫剛好完成
+    const progress = Math.min(window.scrollY / (window.innerHeight * 0.8), 1);
+    hero.style.setProperty('--hero-progress', progress.toFixed(4));
     ticking = false;
   }
 
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
+  if (hero && !reduceMotion) {
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
 
-  update();
+    update();
+  }
 
-  /* ---------- 4. 頁腳年份 ---------- */
+  /* ---------- 3. 頁腳年份 ---------- */
   const year = document.getElementById('year');
   if (year) {
     year.textContent = new Date().getFullYear();
