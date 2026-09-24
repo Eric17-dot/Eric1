@@ -433,11 +433,16 @@ p {
   color: var(--text-secondary);
 }
 
-/* ---------- 7. 生活與足跡 Interests & Travel（圓角卡片） ---------- */
+/* ---------- 7. 旅行 Travel 與 生活 Interests（圓角卡片） ---------- */
+/* 區塊之間用柔和的漸層過渡（白 → 淺灰 → 白），不留生硬的分界 */
+.travel {
+  padding: var(--section-space) 0;
+  background: linear-gradient(to bottom, var(--bg) 0, var(--bg-alt) clamp(160px, 20vw, 320px));
+}
+
 .interests {
   padding: var(--section-space) 0;
-  /* 從白色柔和地過渡到淺灰，區塊之間不留生硬的分界 */
-  background: linear-gradient(to bottom, var(--bg) 0, var(--bg-alt) clamp(160px, 20vw, 320px));
+  background: linear-gradient(to bottom, var(--bg-alt) 0, var(--bg) clamp(160px, 20vw, 320px));
 }
 
 .section-header {
@@ -564,6 +569,82 @@ p {
   background: rgba(255, 255, 255, 0.12);
 }
 
+/* 淺灰卡片：放在白色背景上使用 */
+.card--muted {
+  background: var(--bg-alt);
+}
+
+.card--muted .chip {
+  background: var(--bg);
+}
+
+/* 旅行足跡：以大字地名為主角的格狀排版 */
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.place-item {
+  display: flex;
+}
+
+/* 美國卡片橫跨兩欄 */
+.place-item--wide {
+  grid-column: span 2;
+}
+
+.place {
+  min-height: 320px;
+}
+
+.place-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.place-title {
+  margin-top: 12px;
+  font-size: clamp(36px, 3.6vw, 48px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+}
+
+.place-item--wide .place-title {
+  font-size: clamp(40px, 5.2vw, 64px);
+}
+
+/* 說明文字貼齊卡片底部，和上方的大字地名形成對比 */
+.place-text {
+  max-width: 34em;
+  margin-top: auto;
+  padding-top: 40px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+}
+
+.card--dark .place-eyebrow,
+.card--dark .place-text {
+  color: var(--text-on-dark-secondary);
+}
+
+.place .chips {
+  margin-top: 0;
+  padding-top: 24px;
+}
+
+/* 「未完待續」卡片：地名改用淺灰色 */
+.place--more .place-title {
+  color: var(--text-tertiary);
+}
+
 /* ---------- 8. 頁腳 Let's connect. ---------- */
 .footer {
   background: var(--bg-dark);
@@ -629,10 +710,19 @@ p {
 }
 
 .email-label {
-  margin-top: 14px;
-  font-size: 13px;
-  letter-spacing: 0.12em;
+  margin-top: 16px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
   color: var(--text-on-dark-secondary);
+  overflow-wrap: anywhere;
+}
+
+.email-label a {
+  transition: color 0.3s var(--ease-soft);
+}
+
+.email-label a:hover {
+  color: var(--text-on-dark);
 }
 
 .footer-legal {
@@ -699,6 +789,14 @@ p {
   .card-item {
     --delay: 0s !important;
   }
+
+  .place-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .place {
+    min-height: 280px;
+  }
 }
 
 /* 手機 */
@@ -725,13 +823,30 @@ p {
     margin-top: 40px;
   }
 
-  .card-grid {
+  .card-grid,
+  .place-grid {
     gap: 16px;
   }
 
   .card {
     padding: 32px 28px 28px;
     border-radius: 24px;
+  }
+
+  .place-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .place-item {
+    --delay: 0s !important;
+  }
+
+  .place-item--wide {
+    grid-column: auto;
+  }
+
+  .place {
+    min-height: 240px;
   }
 
   .email-button {
