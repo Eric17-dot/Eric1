@@ -33,7 +33,7 @@
 | 評量 | 比重 | 截止時間 | 準備用的檔案 |
 |---|---|---|---|
 | A1: MCQ Quiz（Study Area 1） | 10% | 2026/9/16（週三）晚上 9:55 | `01`–`06c` |
-| A2: Skills and Application Task（Study Area 2） | 25% | — | `07`–`10` |
+| A2: Skills and Application Task（Study Area 2） | 25% | — | Study Area 2 的內容（從 `07` 開始） |
 | **A3: Group Essay** | **25%** | **2026/11/13（週五）晚上 8:59**（經 Turnitin 提交；Moodle 上有交件前的檢查清單） | `16_` |
 | **A4: Skills and Application Task（Study Area 3）** | **25%** | Week 14（Revision Skills & Application Task SA3） | `11_`–`16_` |
 | A5: Topic Activities | 15% | 持續進行：每週測驗和活動、參與度；**Week 13 Monopoly 畫圖作業 2026/11/27（週五）晚上 8:55** | 各週對應的檔案；畫圖看 `14_` 和 `考試技巧.md` 第 3 節 |
